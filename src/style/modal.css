@@ -1,0 +1,157 @@
+.modal {
+    padding: 1.5rem;
+
+}
+
+.actions {
+    display:flex;
+}
+
+.icon-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--light-grey);
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    cursor:pointer;
+}
+
+.white {
+    color:#fff
+}
+
+.red {
+    color: #f32013;
+}
+
+.action-icon {
+    display:flex;
+    align-items:center;
+
+}
+
+.top-div-modal {
+    display: flex;
+    justify-content: space-between;
+    color: var(--white-text);
+    padding-bottom: 1.2rem;
+}
+
+
+.close-icon {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    color: white;
+    font-size: 1rem;
+}
+
+.close-icon:hover {
+    color: #f32013;
+}
+
+/* MODAL FORM */
+
+.top-div-form,
+.middle-div-form {
+    display: flex;
+}
+
+.bottom-div-form {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.modal-fieldset {
+    padding-right: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.modal-label {
+    display: block;
+    color: rgb(159, 159, 159);
+    margin-bottom: 1rem;
+}
+
+
+
+.modal-input,
+.modal-data {
+    width: 200px;
+    padding: .5rem 1.5rem;
+    background: var(--light-grey);
+    border: 0;
+    color: var(--white-text);
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.modal-data {
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: unset;
+    padding: 1rem 1.5rem;
+}
+
+.warn-title {
+    font-size: 1rem !important;
+    color: #fff !important;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300 !important;
+}
+
+.warn-btn {
+    padding: .2rem 1rem;
+    background: var(--lighter-bg) !important;
+    border: 1px solid #00AE6A !important;
+    color: #00AE6A !important;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: 0 !important;
+    font-size: 1rem !important;
+}
+
+.warn-btn:hover {
+    color: #fff !important;
+    background-color: #00AE6A !important;
+    cursor: pointer
+}
+
+.delete-title {
+    font-size: 1rem !important;
+    color: #fff !important;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400 !important;
+}
+
+.delete-btn {
+    padding: .2rem 1rem;
+    background: var(--lighter-bg) !important;
+    border: 1px solid #f32013 !important;
+    color: #f32013 !important;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: 0 !important;
+    font-size: 1rem !important;
+}
+
+.delete-btn:hover {
+    color: #fff !important;
+    background-color: #f32013 !important;
+    cursor: pointer
+}

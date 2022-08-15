@@ -1,0 +1,11 @@
+.main-button {
+    padding: .5rem 1rem;
+    background: var(--lighter-bg);
+    border: 1px solid #00AE6A;
+    color: #00AE6A;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    transition: all ease .15s;
+}
