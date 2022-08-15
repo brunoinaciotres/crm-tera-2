@@ -15,11 +15,11 @@ export default function ClientModal({ closeModal, client, clients, setClients}) 
         background: "#313131",
         backdrop: "transparent",
         width: "200px",
-        buttonsStyling: false,
+        showConfirmButton: false,
         customClass: {
           title: "warn-title",
-          confirmButton: "warn-btn"
-        }
+        },
+        timer: 1000
       })
       
       

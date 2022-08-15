@@ -1,0 +1,36 @@
+.sign-up-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 400px;
+    height: 500px;
+    background: var(--darker-bg);
+    border-radius: 10px;
+    padding:2rem;
+    position: relative;
+}
+
+.sign-up-title {
+    color: var(--white-text);
+    font-size:1.5rem;
+    margin-bottom: 2rem;
+}
+
+.top-div-form.-signup {
+    flex-direction: column;
+    
+}
+
+.modal-input.-signup {
+    width: 100%;
+    
+}
+
+.modal-fieldset.-signup {
+    padding-right:0;
+}
