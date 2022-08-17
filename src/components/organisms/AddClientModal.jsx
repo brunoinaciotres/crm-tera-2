@@ -48,7 +48,7 @@ export default function AddClientModal({ closeModal, setClients, clients }) {
                     </fieldset>
                     <fieldset className="modal-fieldset">
                         <label htmlFor="#email" className="modal-label">Email</label>
-                        <input type="text" id="email" className="modal-input" />
+                        <input type="text" id="email" autoComplete="off" className="modal-input" />
                     </fieldset>
                 </div>
                 <div className="middle-div-form">

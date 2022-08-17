@@ -28,19 +28,52 @@ export default function SignUp() {
 
         await fetch('http://127.0.0.1:5000/users/create', options)
         .then( response => response.json())
-        .then(data => {
-            console.log(data)
+        .then(response => {
+            
+            if (response.status == 400) {
+            
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    background: '#242323',
+                    color: "#fff",
+                    title: response.msg,
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                return
+            }
+
+            if(response.status == 409) {
+
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    background: '#242323',
+                    color: "#fff",
+                    title: response.msg,
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                return
+            }
+
             Swal.fire({
                 position: 'center',
                 icon: 'success',
                 background: '#242323',
                 color: "#fff",
-                title: 'Cadastrado com sucesso!',
+                title: response.msg,
                 showConfirmButton: false,
                 timer: 1500
             })
+
+            console.log(response.msg)
+            console.log(response)
+            
         })
-        .catch ( e => {
+        .catch ( e  => {
+            
             Swal.fire({
                 position: 'center',
                 icon: 'error',
@@ -54,9 +87,6 @@ export default function SignUp() {
         } 
         )
 
-        document.querySelector("#name").value = ""
-        document.querySelector("#email").value = ""
-        document.querySelector("#password").value = ""
     }
     
 
@@ -68,11 +98,11 @@ export default function SignUp() {
                 <div className="top-div-form -signup">
                     <fieldset className="modal-fieldset -signup ">
                         <label htmlFor="#name" className="modal-label">Nome</label>
-                        <input type="text" id="name" className="modal-input -signup" />
+                        <input type="text" id="name" autoComplete="off" className="modal-input -signup" />
                     </fieldset>
                     <fieldset className="modal-fieldset -signup ">
                         <label htmlFor="#email" className="modal-label">Email</label>
-                        <input type="text" id="email" className="modal-input -signup" />
+                        <input type="text" id="email" autoComplete="off" className="modal-input -signup" />
                     </fieldset>
                     <fieldset className="modal-fieldset -signup ">
                         <label htmlFor="#password" className="modal-label">Senha</label>
