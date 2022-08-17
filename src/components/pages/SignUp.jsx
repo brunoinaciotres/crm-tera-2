@@ -7,14 +7,14 @@ export default function SignUp() {
     const handleSignUp = async (e) => {
         e.preventDefault()
 
-        const name = document.querySelector("#name").value
-        const email = document.querySelector("#email").value
-        const password = document.querySelector("#password").value
+        let nameValue = document.querySelector("#name").value
+        let emailValue = document.querySelector("#email").value
+        let passwordValue = document.querySelector("#password").value
 
         const newUser = {
-            name,
-            email,
-            password
+            nameValue,
+            emailValue,
+            passwordValue
         }
 
         const options = {
@@ -29,47 +29,7 @@ export default function SignUp() {
         await fetch('http://127.0.0.1:5000/users/create', options)
         .then( response => response.json())
         .then(response => {
-            
-            if (response.status == 400) {
-            
-                Swal.fire({
-                    position: 'center',
-                    icon: 'error',
-                    background: '#242323',
-                    color: "#fff",
-                    title: response.msg,
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-                return
-            }
-
-            if(response.status == 409) {
-
-                Swal.fire({
-                    position: 'center',
-                    icon: 'error',
-                    background: '#242323',
-                    color: "#fff",
-                    title: response.msg,
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-                return
-            }
-
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                background: '#242323',
-                color: "#fff",
-                title: response.msg,
-                showConfirmButton: false,
-                timer: 1500
-            })
-
-            console.log(response.msg)
-            console.log(response)
+            checkResponseStatus(response)
             
         })
         .catch ( e  => {
@@ -83,12 +43,56 @@ export default function SignUp() {
                 showConfirmButton: false,
                 timer: 1500
             })
-            console.log(e)
+
         } 
         )
 
+        
     }
     
+    function checkResponseStatus(response){
+        if (response.status == 400) {
+            
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                background: '#242323',
+                color: "#fff",
+                title: response.msg,
+                showConfirmButton: false,
+                timer: 1500
+            })
+            return
+        }
+
+        if(response.status == 409) {
+
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                background: '#242323',
+                color: "#fff",
+                title: response.msg,
+                showConfirmButton: false,
+                timer: 1500
+            })
+            return
+        }
+
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            background: '#242323',
+            color: "#fff",
+            title: response.msg,
+            showConfirmButton: false,
+            timer: 1500
+        })
+
+        setTimeout(() => {
+            window.location.href = '/'
+        }, 2000)
+    }
 
   return (
     <div className="sign-up-container">
@@ -108,9 +112,9 @@ export default function SignUp() {
                         <label htmlFor="#password" className="modal-label">Senha</label>
                         <input type="password" id="password" className="modal-input -signup" />
                     </fieldset>
-                    <div className="bottom-div-form">
-                        <Button title={"Cadastrar"} onClick={handleSignUp} />
-                    </div>
+                    
+                    <Button title={"Cadastrar"} onClick={handleSignUp} />
+                    
                 </div>
             </form>
         </div>

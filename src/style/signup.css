@@ -1,4 +1,4 @@
-.sign-up-container {
+.sign-up-container, .login-container {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -8,29 +8,30 @@
 
 .wrapper {
     width: 400px;
-    height: 500px;
+    /* height: 500px; */
     background: var(--darker-bg);
     border-radius: 10px;
     padding:2rem;
     position: relative;
 }
 
-.sign-up-title {
+.sign-up-title, .login-title {
     color: var(--white-text);
     font-size:1.5rem;
     margin-bottom: 2rem;
 }
 
-.top-div-form.-signup {
+.top-div-form.-signup, .top-div-form.-login {
     flex-direction: column;
     
 }
 
-.modal-input.-signup {
+.modal-input.-signup, .modal-input.-login  {
     width: 100%;
     
 }
 
-.modal-fieldset.-signup {
+.modal-fieldset.-signup, .modal-fieldset.-login {
     padding-right:0;
+    
 }

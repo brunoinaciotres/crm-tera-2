@@ -5,7 +5,7 @@ import {
   } from "react-router-dom";
 
 import React from 'react'
-import {Clients, Products, Support, About, Settings, SignUp} from './components/pages'
+import {Clients, Products, Support, About, Settings, SignUp, Login} from './components/pages'
 
 
 export default function App() {
@@ -18,6 +18,7 @@ export default function App() {
             <Route path="/sobre" element={<About />} />
             <Route path="/config" element={<Settings />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
         </Routes>
     </BrowserRouter>
 

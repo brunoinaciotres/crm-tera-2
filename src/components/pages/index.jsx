@@ -4,6 +4,7 @@ import Support from "./Support";
 import About from "./About";
 import Settings from "./Settings";
 import SignUp from "./SignUp";
+import Login from "./Login";
 
 export {
     Products,
@@ -11,5 +12,6 @@ export {
     Support,
     About,
     Settings,
-    SignUp
+    SignUp,
+    Login
 }
