@@ -16,8 +16,8 @@
     background: var(--darker-bg);
     margin-bottom: 1.5rem;
     border-radius: 10px;
-    padding: 1rem;
     color: #fff;
+    display:flex;
 }
 
 .products-li:last-child {
@@ -33,6 +33,26 @@
     margin-top: 1rem;
 }
 
+.product-data {
+    display:flex;
+    flex-direction: column;
+    width:75%;
+    padding:1rem;
+}
+
+.img-wrapper {
+    width:40%;
+    border-radius:0 10px 10px 0;
+}
+
+.product-img {
+    width: 110%;
+    object-fit:cover;
+    height: 100%;
+    border-radius:0 10px 10px 0;
+}
+
+
 .product-title, .bold {
     font-weight: bold;
 }
@@ -40,6 +60,8 @@
 .data-label {
     margin-right: 1rem;
 }
+
+
 
 
 

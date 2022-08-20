@@ -44,7 +44,7 @@ export default function AddClientModal({ closeModal, setClients, clients }) {
                 <div className="top-div-form">
                     <fieldset className="modal-fieldset">
                         <label htmlFor="#name" className="modal-label">Nome</label>
-                        <input type="text" id="name" className="modal-input" />
+                        <input type="text" id="name" autoComplete="off" className="modal-input" />
                     </fieldset>
                     <fieldset className="modal-fieldset">
                         <label htmlFor="#email" className="modal-label">Email</label>
@@ -54,11 +54,11 @@ export default function AddClientModal({ closeModal, setClients, clients }) {
                 <div className="middle-div-form">
                     <fieldset className="modal-fieldset">
                         <label htmlFor="#phone" className="modal-label">Telefone</label>
-                        <input type="text" id="phone" className="modal-input" placeholder='(  ) 00000-0000' />
+                        <input type="text" id="phone" autoComplete="off" className="modal-input" placeholder='(  ) 00000-0000' />
                     </fieldset>
                     <fieldset className="modal-fieldset">
                         <label htmlFor="#cpf" className="modal-label">CPF</label>
-                        <input type="text" id="cpf" className="modal-input" placeholder='000000000-00' />
+                        <input type="text" id="cpf" autoComplete="off" className="modal-input" placeholder='000000000-00' />
                     </fieldset>
                 </div>
                 <div className="bottom-div-form">
