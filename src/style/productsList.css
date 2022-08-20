@@ -26,18 +26,25 @@
 
 .product-top-div {
     display:flex;
-    margin-top:2rem;
 }
 
 .product-bottom-div {
     margin-top: 1rem;
 }
 
+.product-title {
+    background: var(--light-grey);
+    border-radius: 10px 0 0 0;
+}
+
+.product-title, .data-wrapper  {
+    padding:1rem;
+}
+
 .product-data {
     display:flex;
     flex-direction: column;
     width:75%;
-    padding:1rem;
 }
 
 .img-wrapper {
