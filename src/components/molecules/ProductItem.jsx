@@ -1,5 +1,5 @@
 import {React} from "react";
-import car from '../../assets/imgs/Model-3.jpg'
+
 
 export default function ProductItem({ product }) {
   console.log(product)
@@ -30,7 +30,7 @@ export default function ProductItem({ product }) {
         </div>
       </div>
       <div className="img-wrapper">
-        <img className="product-img" src={car} alt="Foto do carro" />
+        <img className="product-img" src={product.imgUrl} alt="Foto do carro" />
       </div>
     </li>
   );
